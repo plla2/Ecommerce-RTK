@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className='container'>
           <div className='navbar-top flex flex-between'>
             <Link to="/" className='navbar-brand'>
-              <span className='text-regal-blue'>개미의 </span>
+              <span className='text-regal-blue'>짱구의 </span>
               <span className='text-gold'>잡화점</span>
             </Link>
             <form className='navbar-search flex'>
