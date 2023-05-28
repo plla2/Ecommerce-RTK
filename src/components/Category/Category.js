@@ -14,7 +14,7 @@ const Category = ({ categories, status }) => {
       <div className='container'>
         <div className='categories-container'>
           <div className='section-title'>
-            <h3 className='fw-7 text-regal-blue ls-1'>카테고리</h3>
+            <h3 className='fw-9 text-regal-blue ls-1'>카테고리</h3>
           </div>
           <div className='category-items grid'>
             {categories.map(category => (
