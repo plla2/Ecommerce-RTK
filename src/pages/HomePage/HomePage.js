@@ -5,6 +5,8 @@ import Category from '../../components/Category/Category';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategories, fetchProductsByCategory } from '../../store/categorySlice';
 import SingleCategory from '../../components/SingleCategory/SingleCategory';
+import { fetchProduct } from '../../store/productSlice';
+import ProductList from '../../components/ProductList/ProductList';
 
 
 const HomePage = () => {
@@ -14,7 +16,10 @@ const HomePage = () => {
 
   const { cateProductsAll: productsByCategory, cateProductsAllStatus } = useSelector((state) => state.category)
 
+  const { data: products, status: productStatus } = useSelector((state) => state.product)
+
   useEffect(() => {
+    dispatch(fetchProduct())
     dispatch(fetchCategories())
     dispatch(fetchProductsByCategory(1, "all"))
     dispatch(fetchProductsByCategory(2, "all"))
@@ -24,6 +29,7 @@ const HomePage = () => {
     <div className='home-page'>
       <Slider />
       <Category categories={categories} status={categoryStatus} />
+      <ProductList products={products} status={productStatus} />
 
       {/* 첫번째 카테고리 상품들 */}
       <section>
