@@ -103,75 +103,90 @@ store.js에서 해당 상태 값이 업데이트되는 액션 및 리듀서를 �
 
 ## 🗄️ 폴더 구조
 ```
- fe-sprint-coz-shopping
-├
+Ecommerce-RTK
+│
 ├─ node_modules
-├─ .git
-├─ node_modules
+├─ .gitattributes
+├─ .gitignore
 ├─ package-lock.json
 ├─ package.json
 ├─ public
 │  ├─ favicon.ico
+│  ├─ logo192.png
+│  ├─ logo512.png
 │  ├─ index.html
 │  ├─ manifest.json
 │  └─ robots.txt
 │
 ├─ README.md
 └─ src
-   ├─ App.css
+   ├─ App.scss
    ├─ App.js
    ├─ index.js
    ├─ assets
-   │  ├─ 기획전.png
-   │  ├─ 전체.png
-   │  ├─ 카테고리.png
-   │  ├─ 브랜드.png
-   │  ├─ 상품.png
-   │  ├─ 로고.png
-   │  ├─ 쇼핑몰 이름.png
-   │  ├─ Property 1=off.png 
-   │  ├─ Property 1=on.png
-   │  └─ 아이콘.png
+   │  └─ images
+   │     ├─ error.png
+   │     ├─ img1.png
+   │     ├─ img2.png
+   │     ├─ img3.png
+   │     └─ spinner.png
    │ 
    ├─ components
-   │  ├─ Card
-   │  │  ├─ Card.js
-   │  │  └─ Card.module.css
-   │  ├─ BookMarkItem
-   │  │  ├─ BookMarkItem.js
-   │  │  └─ BookMarkItem.module.css
-   │  ├─ Filter
-   │  │  ├─ Filter.js
-   │  │  └─ Filter.module.css
+   │  ├─ Category
+   │  │  ├─ Category.js
+   │  │  └─ Category.scss
+   │  ├─ Error
+   │  │  ├─ Error.js
+   │  │  └─ Error.scss
    │  ├─ Footer
    │  │  ├─ Footer.js
-   │  │  └─ Footer.module.css
-   │  ├─ Header
-   │  │  ├─ Header.js
-   │  │  └─ Header.module.css
-   │  ├─ MainPageItem
-   │  │  ├─ MainPageItem.js
-   │  │  └─ MainPageItem.module.css
-   │  └─ MainPage.js
+   │  │  └─ Footer.scss
+   │  ├─ Footer
+   │  │  ├─ Footer.js
+   │  │  └─ Footer.scss
+   │  ├─ Loader
+   │  │  ├─ Loader.js
+   │  │  └─ Loader.scss
+   │  ├─ Navbar
+   │  │  ├─ Navbar.js
+   │  │  └─ Navbar.scss
+   │  ├─ ProductList
+   │  │  ├─ ProductList.js
+   │  │  └─ ProductList.scss
+   │  ├─ SingleCategory
+   │  │  ├─ SingleCategory.js
+   │  │  └─ SingleCategory.scss
+   │  ├─ SingleProduct
+   │  │  ├─ SingleProduct.js
+   │  │  └─ SingleProduct.scss
+   │  └─ Slider
+   │     ├─ Slider.js
+   │     └─ Slider.scss
+   │  
    │
-   ├─ hooks
-   │  └─ useOutSideClick.js
+   ├─ stores
+   │  ├─ cartSlice.js
+   │  ├─ modalSlice.js
+   │  ├─ productSlice.js
+   │  ├─ categorySlice.js
+   │  └─ store.js
    │
    ├─ pages
-   │  ├─ BookMarkPage
-   │  │  ├─ BookMarkPage.js
-   │  │  └─ BookMarkPage.module.css
-   │  ├─ ProductPage
-   │  │  ├─ CartListPage.js
-   │  │  └─ CartListPage.module.css
-   │  └─ Main.js
+   │  ├─ CartPage
+   │  │  ├─ CartPage.js
+   │  │  └─ CartPage.scss
+   │  ├─ CategoryPage
+   │  │  ├─ CategoryPage.js
+   │  │  └─ CategoryPage.scss
+   │  ├─ HomePage
+   │  │  ├─ HomePage.js
+   │  │  └─ HomePage.scss
+   │  └─ index.js
    │
-   └─ UI
-      ├─ Modal
-      │  ├─ Modal.js
-      │  ├─ ModalContainer.js
-      │  └─ Modal.module.css
-      ├─ Dropdown.js
-      └─ Dropdown.module.css
+   └─ utils
+      ├─ apiURL.js
+      ├─ helpers.js
+      ├─ images.js
+      └─ status.js
      
  ```
